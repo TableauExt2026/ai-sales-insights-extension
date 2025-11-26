@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ExtensionManifest xmlns="http://tableau.com/xml/extension" version="1.0">
-  <Name>AI Sales Insights</Name>
-  <Description>Generate AI-driven insights for sales KPIs.</Description>
-  <DashboardObjectType>Dashboard</DashboardObjectType>
-  <ScriptURL>https://your-github-username.github.io/ai-sales-insights-extension/index.html</ScriptURL>
-</ExtensionManifest>
