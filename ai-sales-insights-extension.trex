@@ -5,7 +5,7 @@
     <Name>AI Sales Insights</Name>
     <Description>Displays automated summary insights from Tableau worksheets</Description>
     <Version>1.0</Version>
-    <Script>https://your-username.github.io/ai-sales-insights-extension/index.html</Script>
+    <Script>https://TableauExt2026.github.io/sales-ai-dashboard/index.html</Script>
     <AllowDashboardInteraction>true</AllowDashboardInteraction>
     <AllowedDataAccess>SummaryData</AllowedDataAccess>
 </Extension>
