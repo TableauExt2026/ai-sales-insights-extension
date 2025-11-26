@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Extension xmlns="http://tableau.com/api" 
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-           xsi:schemaLocation="http://tableau.com/api">
-    <Name>AI Sales Insights</Name>
-    <Description>Displays automated summary insights from Tableau worksheets</Description>
-    <Version>1.0</Version>
-    <Script>https://TableauExt2026.github.io/sales-ai-dashboard/index.html</Script>
-    <AllowDashboardInteraction>true</AllowDashboardInteraction>
-    <AllowedDataAccess>SummaryData</AllowedDataAccess>
+           xsi:schemaLocation="http://tableau.com/api http://tableau.com/api/extension/trex-1.0.xsd">
+  <Name>AI Sales Insights</Name>
+  <Description>Displays automated summary insights from Tableau worksheets</Description>
+  <Version>1.0</Version>
+  <Script>https://TableauExt2026.github.io/ai-sales-insights-extension/index.html</Script>
+  <AllowDashboardInteraction>true</AllowDashboardInteraction>
+  <AllowedDataAccess>SummaryData</AllowedDataAccess>
 </Extension>

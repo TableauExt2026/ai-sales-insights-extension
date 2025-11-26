@@ -1,27 +1,12 @@
 tableau.extensions.initializeAsync().then(() => {
     const worksheets = tableau.extensions.dashboardContent.dashboard.worksheets;
+    let output = "Top 5 rows and columns info:\n";
 
-    worksheets.forEach(sheet => {
-        sheet.getSummaryDataAsync().then(dataTable => {
-            let insightsDiv = document.getElementById("insights");
-            insightsDiv.innerHTML = "";
-
-            const columns = dataTable.columns.map(c => c.fieldName);
-            const rows = dataTable.data.slice(0, 5);
-
-            rows.forEach(row => {
-                const rowData = row.map(cell => cell.formattedValue).join(" | ");
-                const p = document.createElement("p");
-                p.textContent = rowData;
-                insightsDiv.appendChild(p);
-            });
-
-            const metricColumnIndex = 1;
-            let maxValue = Math.max(...dataTable.data.map(r => parseFloat(r[metricColumnIndex].formattedValue)));
-            const insight = document.createElement("p");
-            insight.style.fontWeight = "bold";
-            insight.textContent = `Maximum value in column "${columns[metricColumnIndex]}": ${maxValue}`;
-            insightsDiv.appendChild(insight);
+    worksheets.forEach(ws => {
+        ws.getSummaryDataAsync().then(dataTable => {
+            const cols = dataTable.columns.map(c => c.fieldName).join(", ");
+            output += `Worksheet: ${ws.name}\nColumns: ${cols}\n\n`;
+            document.getElementById("insights").innerText = output;
         });
     });
 });
